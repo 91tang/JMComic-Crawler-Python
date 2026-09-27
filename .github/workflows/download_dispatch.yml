@@ -43,19 +43,6 @@ on:
         description: 上传文件名称
         required: false
 
-#      JM_USERNAME:
-#        type: string
-#        default: ''
-#        description: '禁漫帐号（不建议使用，用户名和密码会泄露在日志中。最好用secrets）'
-#        required: false
-#
-#      JM_PASSWORD:
-#        type: string
-#        default: ''
-#        description: '禁漫密码（不建议使用，用户名和密码会泄露在日志中。最好用secrets）'
-#        required: false
-
-
 jobs:
   crawler:
     runs-on: ubuntu-latest
@@ -85,11 +72,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
 
       - name: Install dependencies and local package
         run: |
